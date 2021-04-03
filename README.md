@@ -1,2 +1,2 @@
 # awol-api
-Api repository for hosted on Heroku for the awol YouTube music/video sharing and chatting platform
+Api repository for the awol YouTube music/video, sharing and chatting platform, both hosted on Heroku. Created using Node, Express and Mongoose.
