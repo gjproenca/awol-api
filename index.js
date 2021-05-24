@@ -12,7 +12,7 @@ const playlists = require('./routes/playlists.js')
 const app = express()
 
 // enable CORS without external module
-app.use(cors)
+app.use(cors())
 
 // Init body-parser options (inbuilt with express)
 app.use(express.json({ limit: '50mb', type: 'application/json' }))
