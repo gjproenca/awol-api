@@ -1,5 +1,6 @@
 const express = require('express')
 const port = process.env.PORT || 3000
+const cors = require('cors')
 require('./db.js') // import DB
 
 // Require & Import API routes
@@ -11,14 +12,7 @@ const playlists = require('./routes/playlists.js')
 const app = express()
 
 // enable CORS without external module
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*')
-  res.header(
-    'Access-Control-Allow-Headers',
-    'Origin, X-Requested-With, Content-Type, Accept'
-  )
-  next()
-})
+app.use(cors)
 
 // Init body-parser options (inbuilt with express)
 app.use(express.json({ limit: '50mb', type: 'application/json' }))
